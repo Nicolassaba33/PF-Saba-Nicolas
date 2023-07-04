@@ -1,0 +1,97 @@
+@import "../base/colores";
+
+#portadaSale {
+  @include imgPortadas;
+  height: 14vh;
+  background-image: url(../../img/PortadaSale.jpg);
+  margin-bottom: 30px;
+
+  .container {
+    text-align: center;
+    width: 87%;
+  }
+
+  h2 {
+    background-color: #890c0c;
+    color: rgb(243, 228, 228);
+    padding: 10px;
+  }
+
+  .carta {
+    margin: 40px 0px;
+
+    @include imgProduct;
+
+    p {
+      margin: 6px;
+    }
+
+    @include botonesCompra;
+  }
+}
+
+#offers {
+  .container {
+    text-align: center;
+    width: 87%;
+  }
+
+  h2 {
+    background-color: #890c0c;
+    color: rgb(243, 228, 228);
+    padding: 10px;
+  }
+
+  .carta {
+    margin: 40px 0px;
+
+    img {
+      border-radius: 15px;
+      justify-content: center;
+      align-items: center;
+      width: 60%;
+      padding: 4px;
+    }
+
+    p {
+      margin: 6px;
+    }
+
+    @include botonesCompra();
+  }
+}
+
+@media (min-width: 720px) {
+  #portadaSale {
+    height: 40vh;
+    h1 {
+      font-size: 45px;
+    }
+  }
+
+  #offers {
+    .container {
+      width: 65%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .products {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .carta {
+      margin: auto;
+      margin: 10px;
+
+      img {
+        width: 200px;
+        height: auto;
+      }
+    }
+  }
+}
